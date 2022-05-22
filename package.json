@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-relay-imports",
+  "name": "@kejistan/eslint-plugin-relay",
   "version": "0.0.1",
   "description": "Additional eslint rules about relay best practices",
   "keywords": [
@@ -29,5 +29,18 @@
   "peerDependencies": {
     "eslint": ">=6"
   },
-  "license": "ISC"
+  "license": "MIT",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kejistan/eslint-plugin-relay.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kejistan/eslint-plugin-relay/issues"
+  },
+  "homepage": "https://github.com/kejistan/eslint-plugin-relay#readme"
 }

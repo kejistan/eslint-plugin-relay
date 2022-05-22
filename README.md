@@ -10,13 +10,19 @@ You'll first need to install [ESLint](https://eslint.org/):
 npm i eslint --save-dev
 ```
 
+Next, install `@kejistan/eslint-plugin-relay`:
+
+```sh
+npm install @kejistan/eslint-plugin-relay --save-dev
+```
+
 ## Usage
 
-Add `relay-imports` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `@kejistan/relay` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
-  "plugins": ["relay-imports"]
+  "plugins": ["@kejistan/relay"]
 }
 ```
 
@@ -25,7 +31,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "relay-imports/no-external-imports": "error"
+    "@kejistan/relay/no-external-imports": "error"
   }
 }
 ```
