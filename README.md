@@ -1,4 +1,4 @@
-# eslint-plugin-relay-imports
+# eslint-plugin-relay
 
 Additional eslint rules about relay best practices
 

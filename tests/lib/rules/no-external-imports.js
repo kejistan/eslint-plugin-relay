@@ -44,6 +44,9 @@ ruleTester.run("no-external-imports", rule, {
     `
       import SomeQuery, {SomeQuery as SomeQueryType} from "./__generated__/SomeQuery.graphql";
     `,
+    `
+      import {SomeQuery as SomeQueryType} from "./__generated__/SomeQuery.graphql";
+    `,
   ],
 
   invalid: [
