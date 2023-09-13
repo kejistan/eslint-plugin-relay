@@ -52,6 +52,16 @@ ruleTester.run("check-generic-annotations", rule, {
         }
       \`, {});
      `,
+     `
+       import {graphql, useLazyLoadQuery} from "react-relay";
+       import {SomeQuery as Query, SomeQuery$variables} from "./__generated__/SomeQuery.graphql";
+   
+       useLazyLoadQuery<Query>(graphql\`
+         query SomeQuery {
+           test
+         }
+       \`, {});
+      `,
     `
       import {graphql, useMutation} from "react-relay";
       import {TestMutation as Mutation} from "./__generated__/TestMutation.graphql";
