@@ -48,5 +48,6 @@
   "bugs": {
     "url": "https://github.com/kejistan/eslint-plugin-relay/issues"
   },
-  "homepage": "https://github.com/kejistan/eslint-plugin-relay#readme"
+  "homepage": "https://github.com/kejistan/eslint-plugin-relay#readme",
+  "packageManager": "yarn@4.8.1"
 }
