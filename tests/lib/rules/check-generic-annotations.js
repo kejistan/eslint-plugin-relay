@@ -3,22 +3,23 @@
  * sure they match the name of the graphql template literal.
  * @author Sean Nicolay
  */
-"use strict";
 
 //------------------------------------------------------------------------------
 // Requirements
 //------------------------------------------------------------------------------
 
-const { ESLintUtils } = require("@typescript-eslint/utils");
-const rule = require("../../../lib/rules/check-generic-annotations");
+import { RuleTester } from "@typescript-eslint/rule-tester";
+import rule from "../../../lib/rules/check-generic-annotations.js";
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new ESLintUtils.RuleTester({
-  parser: "@typescript-eslint/parser",
-  parserOptions: { ecmaVersion: 6, sourceType: "module" },
+const ruleTester = new RuleTester({
+  languageOptions: {
+    ecmaVersion: 6,
+    sourceType: "module",
+  },
 });
 ruleTester.run("check-generic-annotations", rule, {
   valid: [
@@ -52,7 +53,7 @@ ruleTester.run("check-generic-annotations", rule, {
         }
       \`, {});
      `,
-     `
+    `
        import {graphql, useLazyLoadQuery} from "react-relay";
        import {SomeQuery as Query, SomeQuery$variables} from "./__generated__/SomeQuery.graphql";
    

@@ -1,6 +1,6 @@
 {
   "name": "@kejistan/eslint-plugin-relay",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Additional eslint rules about relay best practices",
   "keywords": [
     "eslint",
@@ -8,32 +8,33 @@
     "eslint-plugin"
   ],
   "author": "Sean Nicolay",
-  "main": "lib/index.js",
+  "type": "module",
+  "exports": "./lib/index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha tests --recursive"
+    "test": "node --import ./tests/setup.js --test 'tests/lib/**/*.js'"
   },
   "dependencies": {
-    "graphql": "^16.5.0",
-    "requireindex": "^1.2.0"
+    "graphql": "^16.10.0"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.29.1",
-    "@typescript-eslint/utils": "^8.29.1",
-    "eslint": "^8.49.0",
-    "eslint-plugin-eslint-plugin": "^4.2.0",
-    "eslint-plugin-node": "^11.1.0",
-    "mocha": "^9.2.2",
+    "@typescript-eslint/rule-tester": "^8.29.1",
+    "eslint": "^9.24.0",
+    "eslint-plugin-eslint-plugin": "^6.4.0",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.3"
   },
   "files": [
     "lib"
   ],
   "engines": {
-    "node": "12.x || 14.x || >= 16"
+    "node": ">=18"
   },
   "peerDependencies": {
-    "eslint": ">=6"
+    "@typescript-eslint/parser": ">=8",
+    "eslint": "^8.57.0 || ^9.0.0",
+    "typescript": ">=4.8.4"
   },
   "license": "MIT",
   "directories": {
