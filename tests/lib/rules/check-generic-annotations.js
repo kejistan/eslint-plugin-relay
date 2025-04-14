@@ -8,8 +8,8 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-import { RuleTester } from "@typescript-eslint/rule-tester";
-import rule from "../../../lib/rules/check-generic-annotations.js";
+const { RuleTester } = require("@typescript-eslint/rule-tester");
+const rule = require("../../../lib/rules/check-generic-annotations.js");
 
 //------------------------------------------------------------------------------
 // Tests

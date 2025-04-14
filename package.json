@@ -1,6 +1,6 @@
 {
   "name": "@kejistan/eslint-plugin-relay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Additional eslint rules about relay best practices",
   "keywords": [
     "eslint",
@@ -8,7 +8,7 @@
     "eslint-plugin"
   ],
   "author": "Sean Nicolay",
-  "type": "module",
+  "type": "commonjs",
   "exports": "./lib/index.js",
   "scripts": {
     "lint": "eslint .",

@@ -1,5 +1,5 @@
-import test from "node:test";
-import { RuleTester } from "@typescript-eslint/rule-tester";
+const test = require("node:test");
+const { RuleTester } = require("@typescript-eslint/rule-tester");
 
 RuleTester.afterAll = test.after;
 RuleTester.describe = test.describe;

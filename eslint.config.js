@@ -1,8 +1,8 @@
-import js from "@eslint/js";
-import { defineConfig } from "eslint/config";
-import eslintPlugin from "eslint-plugin-eslint-plugin";
+const js = require("@eslint/js");
+const { defineConfig } = require("eslint/config");
+const eslintPlugin = require("eslint-plugin-eslint-plugin");
 
-export default defineConfig({
+module.exports = defineConfig({
   plugins: {
     "eslint-plugin": eslintPlugin,
     js,

@@ -7,8 +7,8 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-import { RuleTester } from "@typescript-eslint/rule-tester";
-import rule from "../../../lib/rules/no-external-imports.js";
+const { RuleTester } = require("@typescript-eslint/rule-tester");
+const rule = require("../../../lib/rules/no-external-imports.js");
 
 //------------------------------------------------------------------------------
 // Tests
