@@ -49,6 +49,21 @@ ruleTester.run("no-external-imports", rule, {
     `
       import {SomeQuery as SomeQueryType} from "./__generated__/SomeQuery.graphql";
     `,
+    `
+      import {TestFragment_fragment$key} from "#generated/TestFragment_fragment.graphql.ts";
+
+      graphql\`
+        fragment TestFragment_fragment on Nothing {
+          __typename
+        }
+      \`
+    `,
+    `
+      import SomeQuery, {SomeQuery as SomeQueryType} from "./__generated__/SomeQuery.graphql.js";
+    `,
+    `
+      import {Unrelated} from "./unrelated.graphql-helpers.ts";
+    `,
   ],
 
   invalid: [
@@ -67,6 +82,30 @@ ruleTester.run("no-external-imports", rule, {
     {
       code: `
         import SomeQuery, {SomeQuery$data} from "./__generated__/SomeQuery.graphql";
+      `,
+      errors: [
+        {
+          message:
+            "SomeQuery is not defined in the current module. Importing types generated from other modules introduces fragile coupling.",
+          type: "ImportSpecifier",
+        },
+      ],
+    },
+    {
+      code: `
+        import {TestFragment_fragment$key} from "#generated/TestFragment_fragment.graphql.ts";
+      `,
+      errors: [
+        {
+          message:
+            "TestFragment_fragment is not defined in the current module. Importing types generated from other modules introduces fragile coupling.",
+          type: "ImportSpecifier",
+        },
+      ],
+    },
+    {
+      code: `
+        import SomeQuery, {SomeQuery$data} from "./__generated__/SomeQuery.graphql.js";
       `,
       errors: [
         {
