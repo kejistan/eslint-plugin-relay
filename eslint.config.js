@@ -13,6 +13,7 @@ module.exports = defineConfig({
   ],
   languageOptions: {
     ecmaVersion: 2020,
+    sourceType: "commonjs",
   },
   rules: {
     "eslint-plugin/prefer-message-ids": "off",
